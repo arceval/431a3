@@ -1,0 +1,19 @@
+{
+  "name": "a2",
+  "version": "1.0.0",
+  "description": "Assignment 3",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon pubber.js"
+  },
+  "author": "Rohm Laxton",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "zeromq": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
