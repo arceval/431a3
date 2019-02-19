@@ -1,10 +1,11 @@
 var zmq = require('zeromq');
 var sock = zmq.socket('pub');
 
-sock.bindSync('tcp://127.0.0.1:3000');
+sock.bindSync('tcp://*:3000');
 console.log('Publisher bound on port 3000');
 
 setInterval (function() {
-    console.log('sending a multipart envelope');
-    sock.send(['kitty cats', 'meow']);
+    console.log('Sending time to subscribe port');
+    var timestamp = new Date();
+    sock.send(['time', timestamp.getTime()]);
 }, 500);
